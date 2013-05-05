@@ -68,7 +68,7 @@
 				// if it was, update the elementHeight variable to match the new height
 				eHeight = $el.height();
 
-				console.log('height changed to!' + eHeight);
+				//console.log('height changed to!' + eHeight);
 				
 				// re-center the elementoff of the new height
 				this.centerElement($el, pHeight, eHeight);
