@@ -1,0 +1,12 @@
+html {
+	font-family: sans-serif;
+}
+
+#parent-element {
+	height: 400px;
+	background-color: #ececec;
+}
+
+p {
+	width: 400px;
+}
