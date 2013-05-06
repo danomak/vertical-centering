@@ -10,11 +10,11 @@ Usage
 
 Call "verticalCenter" on the DOM elements which should center themselves within their parent.
 
-<$('.centered-text').verticalCenter()>
+`$('.centered-text').verticalCenter();`
 
 Options
 ---------------------
 
-<checkHeightChange: false>
+`checkHeightChange: false`
 *Scans the vertically centered element for a change in it's height and re-adjusts it's positioning as needed*
 
