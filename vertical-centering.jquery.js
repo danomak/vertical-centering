@@ -1,3 +1,6 @@
+// By: Dan Colonna @danomak
+// Authored: May. 5th 2013
+
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
 ;(function ( $, window, document, undefined ) {
@@ -40,13 +43,12 @@
         	var	$this = $(this.element),
         		_this = this,
         		elementHeight = Math.round($this.height()),
-				parentHeight = $this.parent().height(),
-				centeringOffset;
+                parentHeight = $this.parent().height(),
+                centeringOffset;
 
         	_this.centerElement($this, parentHeight, elementHeight);
 
-            if (!_this.options.checkHeightChange == false) {
-                console.log('height check enabled');
+            if (_this.options.checkHeightChange == true) {
     			setInterval(function() {
     				_this.checkElementHeight($this, parentHeight, elementHeight)
     			}, 500);
