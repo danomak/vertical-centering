@@ -14,11 +14,11 @@
     // Create the defaults once
     var pluginName = "verticalCenter",
         defaults = {
-            propertyName: "value"
+            checkHeightChange: false
         };
 
     // The actual plugin constructor
-    function Plugin( element, options ) {
+    function Plugin(element, options) {
         this.element = element;
 
         // jQuery has an extend method which merges the contents of two or
@@ -45,9 +45,12 @@
 
         	_this.centerElement($this, parentHeight, elementHeight);
 
-			setInterval(function() {
-				_this.checkElementHeight($this, parentHeight, elementHeight)
-			}, 500);
+            if (!_this.options.checkHeightChange == false) {
+                console.log('height check enabled');
+    			setInterval(function() {
+    				_this.checkElementHeight($this, parentHeight, elementHeight)
+    			}, 500);
+            }
 
             // Place initialization logic here
             // You already have access to the DOM element and
